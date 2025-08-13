@@ -3,8 +3,9 @@
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
                 <a href="{{ url('/') }}" class="logo d-flex align-items-center">
-                    <span class="sitename">PT. Sahabat Energi Persada</span>
+                    <span class="sitename">Warom Indonesia</span>
                 </a>
+                <p>Powered by PT. Sahabat Energi Persada</p>
                 <div class="footer-contact pt-3">
                     <p>Jl. Macem, RT.002/RW.001, Cikiwul, Kec. Bantar Gebang</p>
                     <p>Kota Bks, Jawa Barat 17152</p>

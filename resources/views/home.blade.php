@@ -23,11 +23,11 @@
         <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
             <div class="carousel-item">
-                <img src="{{ asset('template_sep/assets/img/hero-carousel/hero-carousel-1.jpg') }}" alt="">
+                <img src="{{ asset('template_sep/assets/img/hero-carousel/plant-oil2.webp') }}" alt="">
             </div>
 
             <div class="carousel-item active">
-                <img src="{{ asset('template_sep/assets/img/hero-carousel/hero-carousel-2.jpg') }}" alt="">
+                <img src="{{ asset('template_sep/assets/img/hero-carousel/refinery-adalah.webp') }}" alt="">
             </div>
 
             <div class="carousel-item">
