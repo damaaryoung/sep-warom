@@ -6,10 +6,16 @@
                     <span class="sitename">PT. Sahabat Energi Persada</span>
                 </a>
                 <div class="footer-contact pt-3">
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
-                    <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                    <p><strong>Email:</strong> <span>info@example.com</span></p>
+                    <p>Jl. Macem, RT.002/RW.001, Cikiwul, Kec. Bantar Gebang</p>
+                    <p>Kota Bks, Jawa Barat 17152</p>
+                    <p class="mt-3">
+                        <strong>Phone:</strong> 
+                        <a href="https://wa.me/6285281456966" target="_blank">+6285281456966</a>
+                    </p>
+                    <p>
+                        <strong>Email:</strong> 
+                        <a href="mailto:admin@sep-santi.com">admin@sep-santi.com</a>
+                    </p>
                 </div>
                 <div class="social-links d-flex mt-4">
                     <a href="#"><i class="bi bi-twitter-x"></i></a>
@@ -20,17 +26,17 @@
             </div>
 
             <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Useful Links</h4>
+                <h4>Menu Index</h4>
                 <ul>
                     <li><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="{{ url('/about') }}">About us</a></li>
-                    <li><a href="{{ url('/services') }}">Services</a></li>
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
+                    <!-- <li><a href="{{ url('/services') }}">Services</a></li>
                     <li><a href="#">Terms of service</a></li>
-                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Privacy policy</a></li> -->
                 </ul>
             </div>
 
-            <div class="col-lg-2 col-md-3 footer-links">
+            <!-- <div class="col-lg-2 col-md-3 footer-links">
                 <h4>Our Services</h4>
                 <ul>
                     <li><a href="#">Web Design</a></li>
@@ -61,7 +67,7 @@
                     <li><a href="#">Trodelas</a></li>
                     <li><a href="#">Flexo</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 

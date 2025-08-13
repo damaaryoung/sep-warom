@@ -38,7 +38,6 @@
                         <li><a href="#">Dropdown 4</a></li>
                     </ul>
                 </li> -->
-
                 <li><a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Contact</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
