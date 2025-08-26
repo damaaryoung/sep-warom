@@ -30,6 +30,7 @@
 
     {{-- Main CSS File --}}
     <link rel="stylesheet" href="{{ asset('template_sep/assets/css/main.css') }}">
+    <meta name="google-site-verification" content="fpXvezQCg9mNjVcq5TTzWl7ZAAYdSQhGxWl5nBUB6HI" />
 
     {{-- Info Template --}}
     <!-- 
