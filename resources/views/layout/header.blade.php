@@ -38,6 +38,8 @@
                         <li><a href="#">Dropdown 4</a></li>
                     </ul>
                 </li> -->
+                <li><a href="{{ url('/products') }}" class="{{ request()->is('products') ? 'active' : '' }}">Products</a></li>
+                <li><a href="{{ url('/about_us') }}" class="{{ request()->is('about_us') ? 'active' : '' }}">About Us</a></li>
                 <li><a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Contact</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

@@ -31,6 +31,7 @@
                 <ul>
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
+                    <li><a href="{{ url('/about_us') }}">About Us</a></li>
                     <!-- <li><a href="{{ url('/services') }}">Services</a></li>
                     <li><a href="#">Terms of service</a></li>
                     <li><a href="#">Privacy policy</a></li> -->
