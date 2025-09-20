@@ -152,7 +152,6 @@ async function loadSubCategories(page, mIdCategories) {
         
         // Parse data_table dari string JSON jadi array
         let sub_categories = JSON.parse(response.data_table);
-        console.log(sub_categories);
         
         let ul = document.getElementById("sub_categories_list");
         ul.innerHTML = "";

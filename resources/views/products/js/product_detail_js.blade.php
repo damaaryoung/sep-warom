@@ -21,12 +21,7 @@ async function loadProducts() {
         id_data: $('#idData').val()
     }
     
-    console.log(param_send);
     let result = await fetch_data_table(url, param_send, 1).then((response) => {
-        console.log(response.data_table);
-        
-        // Parse data_table dari string JSON jadi array
-        // let categories = JSON.parse(response.data_table);
         let data = JSON.parse(response.data_table);
 
 
