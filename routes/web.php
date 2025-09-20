@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\DetailProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,6 @@ Route::get('/products/getCategories', [ProductsController::class, 'getCategories
 Route::get('/products/getSubCategories', [ProductsController::class, 'getSubCategories'])->name('products.sub_categories');
 Route::get('/products/getAllProducts', [ProductsController::class, 'getAllProducts'])->name('products.getAllProducts');
 Route::get('/products/getSearchProducts', [ProductsController::class, 'getSearchProducts'])->name('products.getSearchProducts');
+
+Route::get('/detail-products/{id}', [DetailProductsController::class, 'index'])->name('products.getDetailPrds');
+Route::get('/load-products/getDetailsProduct', [DetailProductsController::class, 'getDetailsProduct'])->name('products.getDetailsProduct');

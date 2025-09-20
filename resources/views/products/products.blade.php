@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Warom Indonesia - About Us')
+@section('title', 'Warom Indonesia - Products')
 
 @section('content')
     {{-- Kosong dulu sesuai request --}}

@@ -210,7 +210,6 @@ async function loadAllProducts(page, search_datas) {
 }
 
 async function loadSearchProducts(page, search_datas) {
-    console.log("loadSearchProducts");
     var param_send = {};
 
     var url = "{{ url('/products/getSearchProducts') }}";
@@ -240,6 +239,11 @@ async function loadSearchProducts(page, search_datas) {
     }).catch((e) => console.log(e));
 }
 
+function loadDetails($id){
+    const base = "{{ url('/detail-products') }}";
+    window.location.href = `${base}/${encodeURIComponent($id)}`;
+}
+
 function renderData(response){
     let productsData = JSON.parse(response.data_table);
     let response_code = JSON.parse(response.response_code);
@@ -257,7 +261,11 @@ function renderData(response){
                         <br>
                         <h3>${productsData[i]['product_name']}</h3>
                         <p>${productsData[i]['description']}</p>
-                        <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+                        <a href="javascript:void(0)" 
+                            class="readmore stretched-link" 
+                            onclick="loadDetails('${productsData[i]['id']}')">
+                            Lihat Detail Produk <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                 </div>`;
     }
