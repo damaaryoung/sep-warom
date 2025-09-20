@@ -121,8 +121,7 @@
                             </ul>
                         </li>
                         <div class="search-wrapper">
-                            <input type="text" name="search-items" class="form-control" placeholder="Search Products"
-                                required="">
+                            <input id="formInputSearch" type="text" name="search-items" class="form-control" placeholder="Search Products" required="">
                         </div>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -146,6 +145,7 @@
             <input id="searchCategoryId" type="text" class="form-control input-border-bottom" style="display: none;">
             <input id="seerchSubCategoryId" type="text" class="form-control input-border-bottom" style="display: none;">
             <input id="selectedPage" type="text" class="form-control input-border-bottom" style="display: none;">
+            <input id="selectedPageSearch" type="text" class="form-control input-border-bottom" style="display: none;">
 
         <!-- Services Section -->
         <section id="product_sections" class="services section ">
@@ -162,15 +162,11 @@
 
         <nav aria-label="Page navigation example" id="nav_pagination_all" style="display:none;">
             <ul class="pagination justify-content-center" id="ul_pagination_all">
-                <li class="page-item disabled">
-                    <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-disabled="true">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
-                <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
-                <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)">Next</a>
-                </li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Page navigation example" id="nav_pagination_search" style="display:none;">
+            <ul class="pagination justify-content-center" id="ul_pagination_search">
             </ul>
         </nav>
 

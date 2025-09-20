@@ -20,7 +20,17 @@ $(document).ready(function() {
     $(document).ajaxComplete(function(event, request, settings) {
         document.getElementById('loading').style.display = 'none';
     });
+
     
+    let typingTimer; // timer global
+    const delay = 1000; // 1 detik
+    $('#formInputSearch').on('input', function () {
+        clearTimeout(typingTimer); // reset timer tiap ada input
+        const value = $(this).val();
+        typingTimer = setTimeout(() => {
+            loadSearchProducts(1, "");
+        }, delay);
+    });
 });
 
 function clickCategoriesList(categoryId, categoryName){  
@@ -33,8 +43,10 @@ function clickCategoriesList(categoryId, categoryName){
     
     $("#searchCategoryId").val(categoryId);
     $("#seerchSubCategoryId").val("");
-    
+
+    $('#selectedPageSearch').val("");
     loadSubCategories(1,categoryId);
+    loadSearchProducts(1, "")
 }
 
 function clickSubCategoriesList(subCategoryId, subCategoryName){
@@ -43,6 +55,9 @@ function clickSubCategoriesList(subCategoryId, subCategoryName){
     $('#choosen_sub_category').text(subCategoryName);
     
     $("#seerchSubCategoryId").val(subCategoryId);
+    $('#selectedPageSearch').val("");
+    
+    loadSearchProducts(1, "")
 }
 
 function deleteCategory(){
@@ -50,30 +65,38 @@ function deleteCategory(){
     $('#filter_category').css('display', 'none');
     $('#sub_categories_dropdown').css('display', 'none')
     $('#choosen_category').text("");
-    
+
     $('#filter_sub_category').css('display', 'none');
     
-    $("#searchCategoryId").val("");;
+    $("#searchCategoryId").val("");
 
 
     $('#filter_sub_category').css('display', 'none');
     $('#choosen_sub_category').text("");
     
     $("#seerchSubCategoryId").val("");
-    // loadSearchProducts();
+
+    $('#selectedPageSearch').val("");
+    loadAllProducts(1, "")
 }
 
 function deleteSubCategory(){
     $('#filter_sub_category').css('display', 'none');
     $('#choosen_sub_category').text("");
-    
     $("#seerchSubCategoryId").val("");
-    // loadSearchProducts();
+
+    $('#selectedPageSearch').val("");
+    loadSearchProducts(1, "");
 }
 
 function selectPage(page){
     $('#selectedPage').val(page);
     loadAllProducts(1, "");
+}
+
+function selectPageSearch(page){
+    $('#selectedPageSearch').val(page);
+    loadSearchProducts(1, "");
 }
 
 async function loadCategories(page, params = {}) {
@@ -171,6 +194,7 @@ async function loadAllProducts(page, search_datas) {
 
     let result = await fetch_data_table(url, param_send, page).then((response) => {
         let response_code = JSON.parse(response.response_code);
+        let msg = JSON.parse(response.msg);
 
         if(response_code == "00"){
             renderData(response)
@@ -182,15 +206,43 @@ async function loadAllProducts(page, search_datas) {
             $('#fail_load').css('display', 'block');
             $('#fail_msg').text(msg);
         }
+    }).catch((e) => console.log(e));
+}
 
-        console.log(productsData, paginationData.last_page);
+async function loadSearchProducts(page, search_datas) {
+    console.log("loadSearchProducts");
+    var param_send = {};
+
+    var url = "{{ url('/products/getSearchProducts') }}";
+
+    param_send = {
+        "_token" : '{{csrf_token()}}',
+        search_data         : $('#formInputSearch').val(),
+        searchCategoryId    : $('#searchCategoryId').val(),
+        seerchSubCategoryId : $('#seerchSubCategoryId').val(),
+        page                : $('#selectedPageSearch').val()
+    }
+
+    let result = await fetch_data_table(url, param_send, page).then((response) => {
+        let response_code = JSON.parse(response.response_code);
+        let msg = JSON.parse(response.msg);
+
+        if(response_code == "00"){
+            renderData(response)
+            renderPaginationSearch(response)
+            $('#fail_load').css('display', 'none');
+        } else {
+            $('#product_sections').css('display', 'none');
+            $('#nav_pagination_all').css('display', 'none');
+            $('#fail_load').css('display', 'block');
+            $('#fail_msg').text(msg);
+        }
     }).catch((e) => console.log(e));
 }
 
 function renderData(response){
     let productsData = JSON.parse(response.data_table);
     let response_code = JSON.parse(response.response_code);
-    let msg = JSON.parse(response.msg);
     
     let datas = "";
     
@@ -250,5 +302,44 @@ function renderPaginationAll(response){
             selectPage(page); // panggil function selectPage(page)
         }
     });
+
+    $('#nav_pagination_search').css('display', 'none');
+}
+
+function renderPaginationSearch(response){
+    let paginationData = JSON.parse(response.pagination);
+    let pagination = "";
+    pagination += `<ul class="pagination justify-content-center" id="ul_pagination_search">`;
+    if(paginationData.current_page != 1){
+        pagination += `<li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-disabled="false" data-page="${paginationData.current_page - 1}">Previous</a>
+                        </li>`;
+    } 
+    for(i = 1; i <= paginationData.last_page; i++){
+        if(i == paginationData.current_page){
+            pagination += `<li class="page-item disabled"><a class="page-link" href="javascript:void(0)" aria-disabled="true">${i}</a></li>`;
+        } else {
+            pagination += `<li class="page-item"><a class="page-link" href="javascript:void(0)" data-page="${i}" >${i}</a></li>`;
+        }
+    }
+    if(paginationData.current_page != paginationData.last_page){
+        pagination += `<li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-disabled="false" data-page="${paginationData.current_page + 1}">Next</a>
+                        </li>`;
+    } 
+    pagination += `</ul>`;
+    
+    $('#nav_pagination_search').html(pagination);
+    $('#nav_pagination_search').css('display', 'block');
+    
+    // Tambahin event delegation sekali aja
+    $('#nav_pagination_search').off('click', '.page-link').on('click', '.page-link', function () {
+        const page = $(this).data('page');
+        if(page){ 
+            selectPageSearch(page); // panggil function selectPage(page)
+        }
+    });
+    
+    $('#nav_pagination_all').css('display', 'none');
 }
 </script>

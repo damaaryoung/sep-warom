@@ -27,3 +27,4 @@ Route::get('/products', [ProductsController::class, 'index'])->name('products');
 Route::get('/products/getCategories', [ProductsController::class, 'getCategories'])->name('products.categories');
 Route::get('/products/getSubCategories', [ProductsController::class, 'getSubCategories'])->name('products.sub_categories');
 Route::get('/products/getAllProducts', [ProductsController::class, 'getAllProducts'])->name('products.getAllProducts');
+Route::get('/products/getSearchProducts', [ProductsController::class, 'getSearchProducts'])->name('products.getSearchProducts');

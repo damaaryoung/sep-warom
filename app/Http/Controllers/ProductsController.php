@@ -97,8 +97,54 @@ class ProductsController extends Controller
 
         $response_code =  $data->response_code;
         $msg = $data->response_desc;
-        $data_table = $data->response_data->data;
-        $pagination = $data->response_data->pagination;
+        if($response_code == "00"){
+            $data_table = $data->response_data->data;
+            $pagination = $data->response_data->pagination;
+        } else {
+            $data_table = null;
+            $pagination = null;
+        }
+
+        $data_render['response_code'] = json_encode($response_code);
+        $data_render['msg'] =  json_encode($msg);
+        $data_render['data_table'] = json_encode($data_table);
+        $data_render['pagination'] = json_encode($pagination);
+
+        return response()->json($data_render);
+    }
+
+    public function getSearchProducts(Request $request){
+
+        $search_data = $request->input('search_data', null);
+        $searchCategoryId = $request->input('searchCategoryId', null);
+        $seerchSubCategoryId = $request->input('seerchSubCategoryId', null);
+        $page = $request->input('page', null);
+        
+        $params = array(
+            "request_data" => array(
+                "search_data" => $search_data,
+                "by_categories" => $searchCategoryId,
+                "by_subcategories" => $seerchSubCategoryId
+            )
+        );
+
+        $pagination = ($page !== null) ? "?page=" . $page : "";
+
+        $url = $this->sep->sep_url . "/products/searchProduct" . $pagination;
+
+        $data = $this->sep->getData($url, json_encode($params));
+        $data = json_decode($data);
+
+        $response_code =  $data->response_code;
+        $msg = $data->response_desc;
+        if($response_code == "00"){
+            $data_table = $data->response_data->data;
+            $pagination = $data->response_data->pagination;
+        } else {
+            $data_table = null;
+            $pagination = null;
+        }
+        
 
         $data_render['response_code'] = json_encode($response_code);
         $data_render['msg'] =  json_encode($msg);
