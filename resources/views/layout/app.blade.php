@@ -11,7 +11,7 @@
 
     {{-- Favicons --}}
     <link rel="icon" href="{{ asset('template_sep/assets/img/warom-images/warom-logo.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('template_sep/assets/img/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('template_sep/assets/img/warom-images/warom-logo.png') }}">
 
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +31,8 @@
     {{-- Main CSS File --}}
     <link rel="stylesheet" href="{{ asset('template_sep/assets/css/main.css') }}">
     <meta name="google-site-verification" content="fpXvezQCg9mNjVcq5TTzWl7ZAAYdSQhGxWl5nBUB6HI" />
+    {{-- Main JS File --}}
+    <script src="{{ asset('template_sep/assets/js/jquery-3.7.1.min.js') }}"></script>
 
     {{-- Info Template --}}
     <!-- 
@@ -55,4 +57,7 @@
         {{-- Footer --}}
         @include('layout.footer')
         </div>
+
+        @yield('js')
+        @stack('js')
 </body>

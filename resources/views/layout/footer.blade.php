@@ -98,6 +98,7 @@
 <script src="{{ asset('template_sep/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 <script src="{{ asset('template_sep/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
 <script src="{{ asset('template_sep/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+<script src="{{ asset('template_sep/assets/vendor/bootstrap/js/busyload.min.js') }}"></script>
 
 {{-- Main JS File --}}
 <script src="{{ asset('template_sep/assets/js/main.js') }}"></script>

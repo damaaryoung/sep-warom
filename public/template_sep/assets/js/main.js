@@ -167,3 +167,23 @@
   new PureCounter();
 
 })();
+
+const fetch_data_table = (url, parameter = {}, page = 1) => {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: url + "?page=" + page,
+            data: parameter,
+            cache: false,
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+            },
+            beforeSend: (xhr) => xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr("content")),
+            success: function (data) {
+                resolve(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                reject(textStatus, errorThrown);
+            },
+        });
+    });
+};
