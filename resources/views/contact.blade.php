@@ -41,8 +41,10 @@
                         <i class="bi bi-telephone"></i>
                         <h3>Call Us</h3>
                         <p class="mt-3">
+                        <strong>Whatsapp:</strong> 
+                        <a href="https://wa.me/6285281456966" target="_blank">+62 8528-1456-966</a><br>
                         <strong>Phone:</strong> 
-                        <a href="https://wa.me/6285281456966" target="_blank">+62 8528-1456-966</a>
+                        <a href="" target="_blank">+62 21-8259-7857</a>
                     </p>
                     </div>
                 </div><!-- End Info Item -->

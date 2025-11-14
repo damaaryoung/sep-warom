@@ -10,8 +10,12 @@
                     <p>Jl. Macem, RT.002/RW.001, Cikiwul, Kec. Bantar Gebang</p>
                     <p>Kota Bks, Jawa Barat 17152</p>
                     <p class="mt-3">
-                        <strong>Phone:</strong> 
+                        <strong>Whatsapp:</strong> 
                         <a href="https://wa.me/6285281456966" target="_blank">+6285281456966</a>
+                    </p>
+                    <p class="mt-3">
+                        <strong>Phone:</strong> 
+                        <a href="" target="_blank">+62 21-8259-7857</a>
                     </p>
                     <p>
                         <strong>Email:</strong> 
