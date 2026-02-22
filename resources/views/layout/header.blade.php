@@ -54,6 +54,7 @@
                     </ul>
                 </li> -->
                 <li><a href="{{ url('/products') }}" class="{{ request()->is('products') ? 'active' : '' }}">Products</a></li>
+                <li><a href="{{ url('/clients') }}" class="{{ request()->is('clients') ? 'active' : '' }}">Clients</a></li>
                 <li><a href="{{ url('/about_us') }}" class="{{ request()->is('about_us') ? 'active' : '' }}">About Us</a></li>
                 <li><a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Contact</a></li>
             </ul>
