@@ -12,7 +12,7 @@
                     <div class="col-lg-6 text-center">
                         <h2>Welcome to</br>Warom Indonesia</h2>
                         <p>
-                            Driven by innovation and excellence, we’re continuously enhancing our products and services—on a mission to lead Indonesia’s Electrical and Instrumentation System industry.
+                            Driven by innovation and excellence, we’re continuously enhancing our products and services—on a mission to lead Indonesia’s Explosion Proof Equipment.
                         </p>
                         <!-- <a href="#get-started" class="btn-get-started">Get Started</a> -->
                     </div>
@@ -31,15 +31,15 @@
             </div>
 
             <div class="carousel-item">
-                <img src="{{ asset('template_sep/assets/img/hero-carousel/hero-carousel-3.jpg') }}" alt="">
+                <img src="{{ asset('template_sep/assets/img/hero-carousel/explosion-proof-boxes.jpg') }}" alt="">
             </div>
 
             <div class="carousel-item">
-                <img src="{{ asset('template_sep/assets/img/hero-carousel/hero-carousel-4.jpg') }}" alt="">
+                <img src="{{ asset('template_sep/assets/img/hero-carousel/products-for-zone-2.jpg') }}" alt="">
             </div>
 
             <div class="carousel-item">
-                <img src="{{ asset('template_sep/assets/img/hero-carousel/hero-carousel-5.jpg') }}" alt="">
+                <img src="{{ asset('template_sep/assets/img/hero-carousel/talk-to-our-experts.jpg') }}" alt="">
             </div>
 
             <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
@@ -65,6 +65,20 @@
             <p>Leading the Explosion-Proof Industry Since 1987</p>
         </div><!-- End Section Title -->
 
+        <div class="container">
+            <iframe width="560" 
+            height="560" 
+            style="border-radius: 20px;"
+            src="https://www.youtube.com/embed/NKkrhldcq_c?si=NYNjI868JwWHVebk" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+            class="col-xl-12 d-flex align-items-center"></iframe>
+        </div>
+        </br>
+        </br>
+        </br>
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">

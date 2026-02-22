@@ -2,12 +2,27 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
         {{-- Logo --}}
-        <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+        <!-- OLD LOGO -->
+        <!-- <a href="{{ url('/') }}" class="logo d-flex align-items-center">
             {{-- Kalau mau pake gambar logo --}}
             <img src="{{ asset('template_sep/assets/img/warom-images/warom-logo.png') }}" style="width: 70px; height: auto;" alt="Logo">
             <h1 class="sitename">|&nbsp;&nbsp;</h1><span></span>
             <img src="{{ asset('template_sep/assets/img/warom-images/logo-sep.webp') }}" style="width: 65.68px; height: auto;" alt="Logo">
-        </a>
+        </a> -->
+
+        <div class="logo-group d-flex align-items-center">
+            <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+                <img src="{{ asset('template_sep/assets/img/warom-images/warom-logo.png') }}" style="width: 70px;" alt="Logo">
+                <h1 class="sitename mx-2">|</h1>
+            </a>
+
+            <a href="https://sep-santi.co.id/" 
+                class="logo d-flex align-items-center ms-3"
+                target="_blank"
+                rel="noopener noreferrer">
+                    <img src="{{ asset('template_sep/assets/img/warom-images/logo-sep.webp') }}" style="width: 65px;" alt="Logo">
+            </a>
+        </div>
 
         {{-- Navigation --}}
         <nav id="navmenu" class="navmenu">

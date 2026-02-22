@@ -44,14 +44,15 @@
                         <h4>Est 2017</h4>
                         <h3>Our Story</h3>
                         <p>Sahabat Energi Persada (SEP) was established in 2017, as a member of Sahabat Nusantra Teknologi Inovasi (SANTI) Group.</p>
-                        <p>Driven by innovation and excellence, we’re continuously enhancing our products and services—on a mission to lead Indonesia’s Electrical and Instrumentation System industry.</p>
+                        <p>Since its establishment, SEP has focused on delivering integrated Electrical and Instrumentation solutions, covering supply, services, and system support for various industrial sectors.</p>
+                        <p>With strong experience and technical expertise, SEP provides solutions in:</p>
 
                         <h4><b>Our Solutions</b></h4>
                         <ul>
-                            <li><i class="bi bi-check-circle"></i> <span>Electrical and instrument supply and service</span></li>
-                            <li><i class="bi bi-check-circle"></i> <span>Panel and system design and fabrication</span></li>
-                            <li><i class="bi bi-check-circle"></i> <span>Motor and compressor overhaul and service</span></li>
-                            <li><i class="bi bi-check-circle"></i> <span>Electrical and Instrument Integrator</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span>Explosion-proof lighting, panels, and related components</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span>MV and LV bus ducts, transformers, and switchgear</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span>Electrical panel and system design, fabrication, and assembly</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span>Electrical and instrumentation system integration</span></li>
                         </ul>
 
                         <p>With experienced staffs, adequate facilities, and reputable principals, we believe that we are now going to be a leader of Electrical, and Instrument System in Indonesia.</p>
