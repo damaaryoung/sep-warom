@@ -94,6 +94,17 @@
                     Waterproof and Dustproof and other products, the SCS Safety Software Intelligent Control system has been launched simultaneously, 
                     and the key technical indicators of related products have reached the international advanced and domestic leading technical level.</p>
             </div>
+            <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <iframe width="560" 
+                    height="560" 
+                    style="border-radius: 20px;"
+                    src="https://www.youtube.com/embed/FRemYOsIYAI?si=faC476T4PsDwAcjD" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    class="col-xl-12 d-flex align-items-center"></iframe>
+            </div>
         </div>
     </div>
 </section><!-- /Alt Services Section -->
